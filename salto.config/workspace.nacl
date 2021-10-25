@@ -1,0 +1,5 @@
+workspace {
+  uid = "d77ce8c5-7ec1-4e36-867d-ecb61a7d02ba"
+  name = "DeleteMe-25-10"
+  staleStateThresholdMinutes = undefined
+}
