@@ -1,0 +1,15 @@
+salesforce.WorkflowAlert Opportunity_Discount_Approved@vu {
+  fullName = "Opportunity.Discount_Approved"
+  description = "Discount Approved"
+  protected = false
+  recipients = [
+    {
+      type = "owner"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = "Discount_Request_Responses/Discount_Approved"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

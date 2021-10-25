@@ -1,0 +1,191 @@
+type salesforce.Opportunity {
+  salesforce.Picklist DeliveryInstallationStatus__c {
+    apiName = "Opportunity.DeliveryInstallationStatus__c"
+    label = "Delivery/Installation Status"
+    valueSet = [
+      {
+        fullName = "In progress"
+        default = false
+        label = "In progress"
+      },
+      {
+        fullName = "Yet to begin"
+        default = false
+        label = "Yet to begin"
+      },
+      {
+        fullName = "Completed"
+        default = false
+        label = "Completed"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text TrackingNumber__c {
+    apiName = "Opportunity.TrackingNumber__c"
+    label = "Tracking Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 12
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text OrderNumber__c {
+    apiName = "Opportunity.OrderNumber__c"
+    label = "Order Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text CurrentGenerators__c {
+    apiName = "Opportunity.CurrentGenerators__c"
+    label = "Current Generator(s)"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text MainCompetitors__c {
+    apiName = "Opportunity.MainCompetitors__c"
+    label = "Main Competitor(s)"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Number Discount_Percentage__c {
+    apiName = "Opportunity.Discount_Percentage__c"
+    label = "Discount Percentage"
+    precision = 4
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist Approval_Status__c {
+    apiName = "Opportunity.Approval_Status__c"
+    label = "Approval Status"
+    valueSet = [
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+      },
+      {
+        fullName = "Not Approved"
+        default = false
+        label = "Not Approved"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.FormulaNumber Days_SQL_to_CW__c {
+    apiName = "Opportunity.Days_SQL_to_CW__c"
+    label = "Days_SQL_to_CW"
+    precision = 18
+    scale = 2
+    formula = '''
+IF(
+	1 > 0,
+	2,
+  0
+)
+'''
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    description = "Multiline example"
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaNumber Days2_SQL_to_CW__c {
+    apiName = "Opportunity.Days2_SQL_to_CW__c"
+    label = "Days_SQL_to_CW"
+    precision = 18
+    scale = 2
+    formula = '''
+IF(
+	1 > 0,
+	2,
+   0
+)
+'''
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    description = "Multiline example"
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.FormulaNumber Days4_SQL_to_CW__c {
+    apiName = "Opportunity.Days4_SQL_to_CW__c"
+    label = "Days4_SQL_to_CW"
+    precision = 18
+    scale = 2
+    formula = '''
+IF(
+	1 > 0,
+	2,
+   0
+)
+'''
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    description = "Multiline example"
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+}

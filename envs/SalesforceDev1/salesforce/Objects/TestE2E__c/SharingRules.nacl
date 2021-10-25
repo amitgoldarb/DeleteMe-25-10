@@ -1,0 +1,6 @@
+salesforce.SharingRules TestE2E__c {
+  fullName = "TestE2E__c"
+  _parent = [
+    salesforce.TestE2E__c,
+  ]
+}

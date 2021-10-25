@@ -1,0 +1,115 @@
+salesforce.ApprovalProcess Opportunity_Discount_Approval_Process@vuu {
+  fullName = "Opportunity.Discount_Approval_Process"
+  active = true
+  allowRecall = false
+  allowedSubmitters = {
+    type = "owner"
+  }
+  approvalPageFields = {
+    field = [
+      "Name",
+      "Owner",
+      "Amount",
+      "Discount_Percentage__c",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = {
+          type = "userHierarchyField"
+        }
+      }
+      description = "Discount approver must approve discounts over 15%"
+      entryCriteria = {
+        criteriaItems = {
+          field = salesforce.Opportunity.field.Discount_Percentage__c
+          operation = "greaterThan"
+          value = "15"
+        }
+      }
+      ifCriteriaNotMet = "ApproveRecord"
+      label = "Manager Approval"
+      name = "Manager_Approval"
+    },
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = {
+          name = "awheeeeeeler@apblue052419.com"
+          type = "user"
+        }
+        whenMultipleApprovers = "FirstResponse"
+      }
+      description = "VP North American Sales must approve discounts over 40%"
+      entryCriteria = {
+        criteriaItems = {
+          field = salesforce.Opportunity.field.Discount_Percentage__c
+          operation = "greaterThan"
+          value = "40"
+        }
+      }
+      label = "VP Approval"
+      name = "VP_Approval"
+      rejectBehavior = {
+        type = "RejectRequest"
+      }
+    },
+  ]
+  description = "Automates opportunity discount approvals"
+  enableMobileDeviceAccess = false
+  entryCriteria = {
+    criteriaItems = {
+      field = salesforce.Opportunity.field.Discount_Percentage__c
+      operation = "greaterThan"
+      value = "0"
+    }
+  }
+  finalApprovalActions = {
+    action = [
+      {
+        name = "Approval_Status_to_Approved"
+        type = "FieldUpdate"
+      },
+      {
+        name = "Discount_Approved"
+        type = "Alert"
+      },
+    ]
+  }
+  finalApprovalRecordLock = false
+  finalRejectionActions = {
+    action = [
+      {
+        name = "Approval_Status_to_Not_Approved"
+        type = "FieldUpdate"
+      },
+      {
+        name = "Clear_Discount_Percentage"
+        type = "FieldUpdate"
+      },
+      {
+        name = "Discount_Rejected"
+        type = "Alert"
+      },
+    ]
+  }
+  finalRejectionRecordLock = false
+  initialSubmissionActions = {
+    action = [
+      {
+        name = "Approval_Status_Pending"
+        type = "FieldUpdate"
+      },
+    ]
+  }
+  label = "Discount Approval Process"
+  nextAutomatedApprover = {
+    useApproverFieldOfRecordOwner = true
+    userHierarchyField = "Manager"
+  }
+  processOrder = 1
+  recordEditability = "AdminOnly"
+  showApprovalHistory = true
+}

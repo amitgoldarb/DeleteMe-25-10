@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Opportunity_Approval_Status_to_Approved@vuuu {
+  fullName = "Opportunity.Approval_Status_to_Approved"
+  field = salesforce.Opportunity.field.Approval_Status__c
+  literalValue = "Approved"
+  name = "Approval Status to Approved"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Opportunity_Approval_Status_Pending@vuu {
+  fullName = "Opportunity.Approval_Status_Pending"
+  field = salesforce.Opportunity.field.Approval_Status__c
+  literalValue = "Pending"
+  name = "Approval Status Pending"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

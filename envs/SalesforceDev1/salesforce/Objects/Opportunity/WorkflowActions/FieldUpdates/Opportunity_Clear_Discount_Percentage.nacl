@@ -1,0 +1,12 @@
+salesforce.WorkflowFieldUpdate Opportunity_Clear_Discount_Percentage@vuu {
+  fullName = "Opportunity.Clear_Discount_Percentage"
+  field = salesforce.Opportunity.field.Discount_Percentage__c
+  name = "Clear Discount Percentage"
+  notifyAssignee = false
+  operation = "Null"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

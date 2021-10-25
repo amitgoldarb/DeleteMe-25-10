@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Opportunity_Approval_Status_to_Not_Approved@vuuuu {
+  fullName = "Opportunity.Approval_Status_to_Not_Approved"
+  field = salesforce.Opportunity.field.Approval_Status__c
+  literalValue = "Not Approved"
+  name = "Approval Status to Not Approved"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

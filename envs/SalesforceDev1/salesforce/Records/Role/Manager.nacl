@@ -1,0 +1,10 @@
+salesforce.Role Manager {
+  fullName = "Manager"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Manager"
+  mayForecastManagerShare = false
+  name = "Manager"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.VPNorthAmericanSales
+}

@@ -1,0 +1,195 @@
+type salesforce.Account {
+  salesforce.AutoNumber dsds__c {
+    apiName = "Account.dsds__c"
+    label = "dsds"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    externalId = false
+  }
+  salesforce.Picklist SLA__c {
+    apiName = "Account.SLA__c"
+    label = "SLA"
+    valueSet = [
+      {
+        fullName = "amitUpdated"
+        default = false
+        label = "amitUpdated"
+      },
+      {
+        fullName = "Silver"
+        default = false
+        label = "Silver"
+      },
+      {
+        fullName = "Platinum"
+        default = false
+        label = "Platinum"
+      },
+      {
+        fullName = "Bronze"
+        default = false
+        label = "Bronze"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    sorted = false
+  }
+  salesforce.Picklist Active__c {
+    apiName = "Account.Active__c"
+    label = "Active"
+    valueSet = [
+      {
+        fullName = "Yes"
+        default = false
+        label = "YessssS"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    sorted = false
+  }
+  salesforce.Number NumberofLocations__c {
+    apiName = "Account.NumberofLocations__c"
+    label = "Number of Locations"
+    precision = 3
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
+  salesforce.Picklist UpsellOpportunity__c {
+    apiName = "Account.UpsellOpportunity__c"
+    label = "Upsell Opportunity"
+    valueSet = [
+      {
+        fullName = "Maybe"
+        default = false
+        label = "Maybe"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    sorted = false
+  }
+  salesforce.Text SLASerialNumber__c {
+    apiName = "Account.SLASerialNumber__c"
+    label = "SLA Serial Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
+  salesforce.Date SLAExpirationDate__c {
+    apiName = "Account.SLAExpirationDate__c"
+    label = "SLA Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
+  salesforce.AutoNumber TestingObj__c {
+    apiName = "Account.TestingObj__c"
+    label = "TestingObj"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    externalId = false
+  }
+  salesforce.Text WithGil__c {
+    apiName = "Account.WithGil__c"
+    label = "WithGil"
+    inlineHelpText = "dasdasdasdasda"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    description = "descriptionnnnnnnnn"
+    externalId = false
+    trackFeedHistory = false
+  }
+  salesforce.AutoNumber WithGil2__c {
+    apiName = "Account.WithGil2__c"
+    label = "WithGil2"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    externalId = false
+  }
+  salesforce.AutoNumber trackerTest__c {
+    apiName = "Account.trackerTest__c"
+    label = "trackerTest"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    externalId = false
+  }
+  salesforce.Checkbox dsdsdsdsdsd__c {
+    apiName = "Account.dsdsdsdsdsd__c"
+    label = "dsdsds"
+    defaultValue = false
+    inlineHelpText = "dsds"
+    createable = true
+    updateable = true
+    queryable = true
+    description = "fsds"
+    externalId = false
+    trackFeedHistory = false
+  }
+  salesforce.AutoNumber fromNacl3__c {
+    apiName = "Account.fromNacl3__c"
+    label = "fromNacl3"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    externalId = false
+  }
+  salesforce.Checkbox modificationChange__c {
+    apiName = "Account.modificationChange__c"
+    label = "modificationChange"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
+}

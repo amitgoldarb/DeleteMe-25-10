@@ -1,0 +1,15 @@
+salesforce.WorkflowAlert Opportunity_Discount_Rejected@vu {
+  fullName = "Opportunity.Discount_Rejected"
+  description = "Discount Rejected"
+  protected = false
+  recipients = [
+    {
+      type = "owner"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = "Discount_Request_Responses/Discount_Rejected"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}
